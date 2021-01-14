@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="img/logo.png">
     <title>MyOnlineMeal | Healthy & Testy</title>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
@@ -32,7 +33,7 @@
         <h1 class="h-primary">Welcome to MyOnlineMeal</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis dolorum numquam minus. </p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-        <button class="btn">Order Now</button>
+        <button onclick="popUp()" class="btn">Order Now</button>
     </section>
 
     <section id="services-container">
@@ -106,7 +107,7 @@
                     <textarea name="message" id="message" cols="30" rows="10"></textarea>
                 </div>
                 <div align="center">
-                    <button>
+                    <button onclick="popUp()">
                         <p>Send Message</p>
                     </button>
                 </div>
@@ -119,6 +120,23 @@
             Copyright &copy; www.myOnlineMeal.com. All rights reserved!
         </div>
     </footer>
+			<script>
+	function popUp(){
+		swal({
+  			title: "Good job!",
+  			text: "You have successfully booked your Order!", 
+  			icon: "success"
+		});
+	}
+
+	function popUp1(){
+		swal({
+  			title: "Good job!",
+  			text: "You have successfully verified your account!", 
+  			icon: "error"
+		});
+	}
+</script>
 </body>
 
 </html>
